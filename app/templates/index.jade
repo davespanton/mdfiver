@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title MD Fiver
+
+    
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css")
+
+  body
+    .container
+      .row
+        .col-md-3.col-md-offset-3
+          h2.text-muted MD5
+      .row
+        .col-md-5.col-md-offset-3
+          form(action="/digest")
+            .form-group
+              label(for="url") URL:
+              input#url.form-control(type="url" name="url" value="#{url}" required)
+            button.btn.btn-default(type="submit") GO!
+      if result
+        .row
+          .col-md-3.col-md-offset-3
+            h2.text-danger #{result}
+
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js")

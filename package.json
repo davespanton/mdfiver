@@ -1,0 +1,20 @@
+{
+  "name": "mdfiver",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "4.8.8",
+    "jade": "1.6.0",
+    "request": "2.42.0",
+    "concat-stream": "1.4.6",
+    "valid-url": "1.0.9"
+  },
+  "devDependencies": {
+    "mocha": "1.21.4",
+    "supertest": "0.13.0"
+  },
+  "scripts": {
+    "start": "node app/app.js",
+    "test": "mocha test/*.test.js"
+  },
+  "main": "app/app.js"
+}
